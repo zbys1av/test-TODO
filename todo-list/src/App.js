@@ -10,7 +10,7 @@ function App() {
     <div className='body'>
       <div className="container">
         <Header/>
-        <Form/>
+        {/* <Form/> */}
         <Tests/>
       </div>
     </div>
