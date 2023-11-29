@@ -86,3 +86,38 @@ html{
     color: #ffffff;
   }
 }
+
+.todos{
+  &__box{
+  }
+
+  &__tasks{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__card{
+    margin: 0;
+    padding: 10px;
+    background-color: #d98e1e;
+    border-radius: 10px;
+    border: 2px solid #d98e1e;
+    transition: 0.5s;
+
+    &:hover{
+      transition: 0.5s;
+      background: #d98e1e8a;
+    }
+  }
+
+  &__task{
+    user-select: none;
+    margin: 0;
+  }
+
+  &__completed{
+    user-select: none;
+    margin: 0;
+  }
+}
