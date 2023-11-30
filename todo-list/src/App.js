@@ -1,11 +1,10 @@
 //Importing components
 import Header from './Components/Header';
 import Form from './Components/Form';
-import Tests from './Components/Tests';
-import Test from './Components/Test';
 
 import Todos from './Components/Todos';
 import Todo from './Components/Todo';
+import Crud from './Components/Crud';
 
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 // import Switch from "react-switch";
@@ -16,8 +15,8 @@ function App() {
     <div className='body'>
       <div className="container">
         <Header/>
+        {/* <Crud/> */}
         {/* <Form/> */}
-        {/* <Tests/> */}
         <Router>
           <Routes>
             {/* HOME PAGE */}

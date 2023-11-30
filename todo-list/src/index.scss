@@ -36,6 +36,7 @@ html{
 }
 
 .button{
+  margin: 0;
   text-transform: uppercase;
   font-weight: bold;
   background-color: #ffffff;
@@ -69,13 +70,6 @@ html{
   }
 }
 
-.test{
-  background-color: #d98e1e;
-  border-radius: 10px;
-  min-height: 100px;
-  margin: 20px 0;
-}
-
 .header{
 
   &__title{
@@ -89,6 +83,33 @@ html{
 
 .todos{
   &__box{
+  }
+
+  &__buttons-section{
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  &__buttons{
+    display: flex;
+  }
+
+  &__number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    background-color: #ffd95c;
+    padding: 1px;
+    border-radius: 5px;
+    margin: 0;
+    width: 30px;    
+    font-weight: bold;
+  }
+
+  &__info{
+    margin: 15px 0 0 0;
   }
 
   &__tasks{
@@ -119,5 +140,15 @@ html{
   &__completed{
     user-select: none;
     margin: 0;
+  }
+}
+
+.crud{
+  margin-top: 20px;
+  &__box{
+    padding: 2px 13px;
+    background-color: #d98e1e;
+    min-height: 100px;
+    border-radius: 10px;
   }
 }

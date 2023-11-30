@@ -19,11 +19,11 @@ function Todo(props){
     return(
         <div className="todo">
             <div className="todo__box">
-                <p onClick={() => navigate(`/`)}  className="todo__back button">Back</p>
+                <p onClick={() => navigate(`/`)}  className="todo__back button">&#x25c0;  Back</p>
                 {details ? (
                         <div className="todo__task">
                             <h3 className="todo__title">{title}</h3>
-                            <p className="todo__completed">{`Completed: ${completed}`}</p>
+                            <p className="todo__completed">{`${completed ? "completed" : "not completed"}`}</p>
                         </div> 
                     ) : <p>loading...</p>} 
             </div>
