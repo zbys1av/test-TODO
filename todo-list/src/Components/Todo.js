@@ -23,7 +23,7 @@ function Todo(props){
                 {details ? (
                         <div className="todo__task">
                             <h3 className="todo__title">{title}</h3>
-                            <p className="todo__completed">{`${completed ? "completed" : "not completed"}`}</p>
+                            <p style={{backgroundColor: completed ? "#4b993c" : "#ad4834"}} className="todo__completed">{`${completed ? "completed" : "not completed"}`}</p>
                         </div> 
                     ) : <p>loading...</p>} 
             </div>

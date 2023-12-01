@@ -10,6 +10,10 @@ function TodoCard(props){
         textDecoration: "line-through",
     }
 
+    const taskStatus = {
+        backgroundColor: completed ? "#4b993c" : "#ad4834",
+    }
+
     return (
         <div className="todos__card">
             <div className="todos__buttons-section">
@@ -22,7 +26,7 @@ function TodoCard(props){
             </div>
             <div className="todos__info">
                 <h3 style={completed ? style : {}} className="todos__task">{title}</h3>
-                <p className="todos__completed">{`${completed ? "completed" : "not completed"}`}</p>
+                <p style={taskStatus} className="todos__completed">{`${completed ? "completed" : "not completed"}`}</p>
             </div>
         </div>
     )

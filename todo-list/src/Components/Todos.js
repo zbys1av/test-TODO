@@ -12,12 +12,17 @@ function Todos(){
     }, []);          // we have empty array to fetch data only once 
 
     // just to make length of our list not static
-    // let randomLength = todos ? Math.floor(Math.random() * todos.length) : "loading";
-    let randomLength = 230;
+    let randomLength = todos ? Math.floor(Math.random() * todos.length) : "loading";
+    // let randomLength = 230;
 
+
+    function test(e){
+        const task = e.target.elements.task.value;
+    }
 
     function handleSubmit(e){
-        const task = e.target.elements.task.value 
+        e.preventDefault();
+        const task = e.target.elements.task.value;
         const newList = {
             id: 201,
             title: "",

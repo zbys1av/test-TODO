@@ -5,11 +5,7 @@ html{
 }
 
 .body{
-  margin: 0;
-  padding: 10px;
-  background-color: #d9ad1e;
-  border-radius: 10px;
-  min-height: 300px;
+
 }
 
 .container{
@@ -39,9 +35,9 @@ html{
   margin: 0;
   text-transform: uppercase;
   font-weight: bold;
-  background-color: #ffffff;
+  background-color: #FFD95C;
   padding: 5px;
-  border: 2px solid #d9ad1e;
+  border: 2px solid transparent;
   border-radius: 6px;
   transition: 0.6s;
   min-width: 30px;
@@ -49,8 +45,8 @@ html{
   &:hover{
     cursor: pointer;
     transition: 0.6s;
-    background-color: #d9ad1e;
-    border: 2px solid #ffffff;
+    background-color: #d98e1e;
+    border: 2px solid transparent;
     color: #ffffff;
   }
 }
@@ -93,6 +89,7 @@ html{
 
   &__buttons{
     display: flex;
+    gap: 10px;
   }
 
   &__number{
@@ -106,6 +103,7 @@ html{
     margin: 0;
     width: 30px;    
     font-weight: bold;
+    user-select: none;
   }
 
   &__info{
@@ -138,8 +136,35 @@ html{
   }
 
   &__completed{
+    padding: 2px;
+    border-radius: 5px;
+    width: 15%;
+    text-align: center;
     user-select: none;
-    margin: 0;
+    margin: 5px 0px;
+  }
+}
+
+.todo{
+  &__back{
+    background-color: #d98e1e;
+    width: 10%;
+    padding: 4px 0px 0px 0px;
+    text-align: center;
+  }
+
+  &__task{
+    background-color: #d98e1e;
+    padding: 1px 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  &__completed{
+    padding: 2px;
+    border-radius: 5px;
+    width: 15%;
+    text-align: center;
   }
 }
 
@@ -150,5 +175,34 @@ html{
     background-color: #d98e1e;
     min-height: 100px;
     border-radius: 10px;
+  }
+
+  &__form{
+    display: flex;
+    justify-content: space-between;
+    background-color: #d98e1e;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  &__form-inp{
+    background-color: #ffd95c;
+    border: 1px solid transparent;
+    padding: 5px;
+    border-radius: 5px;
+    width: 70%;
+
+    &:focus{
+      outline: none;
+    }
+  }
+
+  &__add{
+    width: 25%;
+
+    &:hover{
+      background: rgba(255, 196, 34, 0.836)
+    }
   }
 }
