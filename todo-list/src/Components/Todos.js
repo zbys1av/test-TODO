@@ -39,10 +39,10 @@ function Todos(){
                 <p className="todos__count">{`Tasks: ${randomLength}`}</p>
 
 
-                <form onSubmit={handleSubmit} className="crud__form" >
+                {/* <form onSubmit={handleSubmit} className="crud__form" >
                     <input type="text" name="title" placeholder="Add task here" className="crud__form-inp"></input>
                     <button type="submit" className="crud__add button ">Add</button>
-                </form>
+                </form> */}
 
 
                 {/* CHECKING IF "todos" WAS LOADED */}

@@ -206,3 +206,97 @@ html{
     }
   }
 }
+
+.form{
+  margin-top: 50px;
+
+  &__box{
+    padding: 10px 13px;
+    background-color: #d98e1e;
+    min-height: 100px;
+    border-radius: 10px;
+  }
+
+  &__form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__add-task{
+    display: flex;
+    gap: 40px;
+  }
+
+  &__input{
+    background-color: #ffd95c;
+    border: 1px solid transparent;
+    padding: 5px;
+    border-radius: 5px;
+    width: 70%;
+
+    &:focus{
+      background-color: #ffd95c;
+      outline: none;
+    }
+  }
+
+  &__button{
+    width: 25%;
+
+    &:hover{
+      background: rgba(255, 196, 34, 0.836)
+    }
+  }
+
+  &__select-section{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__select{
+    font-weight: bold;
+    font-size: 15px;
+
+    option{
+      font-weight: bold;
+    }
+  }
+}
+
+.todo{
+  &__box{
+    display: flex;
+    justify-content: space-between;
+    background-color: #d98e1e;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  &__buttons{
+    display: flex;
+    gap: 10px;
+  }
+
+  &__list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+
+  &__item{
+    display: flex;
+    align-items: center;
+
+    list-style: none;
+  }
+
+  .completed{
+    text-decoration: line-through;
+  }
+
+  .button-comp{
+    visibility: hidden;
+  }
+}
