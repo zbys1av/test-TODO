@@ -14,6 +14,7 @@ html{
   background-color: #ffd95c;
   border-radius: 10px;
   margin: auto;
+  overflow: hidden;
 }
 
 .input{
@@ -58,19 +59,19 @@ html{
   transition: 0.6s;
 
   &:focus{
-    transition: 0.1s;
-    background-color: #d9ad1e;
-    color: #ffffff;
-    border: 2px solid #ffffff;
     outline: none;
   }
 }
 
 .header{
+  &__box{
+  }
 
   &__title{
     text-align: center;
-    font-size: 30px;
+    font-size: 90px;
+    text-align: center;
+    z-index: 0;
     margin: 0;
     text-transform: uppercase;
     color: #ffffff;
@@ -208,13 +209,14 @@ html{
 }
 
 .form{
+  position: relative;
   margin-top: 50px;
-
+  z-index: 1;
   &__box{
-    padding: 10px 13px;
-    background-color: #d98e1e;
-    min-height: 100px;
-    border-radius: 10px;
+    // padding: 10px 13px;
+    // background-color: #d98e1e;
+    // min-height: 100px;
+    // border-radius: 10px;
   }
 
   &__form{
@@ -224,6 +226,10 @@ html{
   }
 
   &__add-task{
+    padding: 10px 13px;
+    background-color: #d98e1e;
+    border-radius: 10px;
+
     display: flex;
     gap: 40px;
   }
@@ -255,8 +261,17 @@ html{
   }
 
   &__select{
+    background-color: #d98e1e;
+    border: 2px solid transparent;
+    color: #ffffff;
     font-weight: bold;
     font-size: 15px;
+
+    &:focus{
+      background-color: #ffd95c;
+      border: 2px solid #d98e1e;
+      color: #000000;
+    }
 
     option{
       font-weight: bold;
@@ -265,6 +280,7 @@ html{
 }
 
 .todo{
+  z-index: 1;
   &__box{
     display: flex;
     justify-content: space-between;
@@ -290,6 +306,18 @@ html{
     align-items: center;
 
     list-style: none;
+  }
+
+  &__complete{
+    &:hover{
+      background-color: rgb(109, 170, 94);
+    }
+  }
+
+  &__delete{
+    &:hover{
+      background-color: #c96e53;
+    }
   }
 
   .completed{
