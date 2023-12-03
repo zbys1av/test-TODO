@@ -17,13 +17,13 @@ function Todo(props){
     const {id: todoId, userID, title, completed} = details || {};
 
     return(
-        <div className="todo">
-            <div className="todo__box">
-                <p onClick={() => navigate(`/`)}  className="todo__back button">&#x25c0;  Back</p>
+        <div className="todoPage">
+            <div className="todoPage__box">
+                <p onClick={() => navigate(`/`)}  className="todoPage__back button">&#x25c0;  Back</p>
                 {details ? (
-                        <div className="todo__task">
-                            <h3 className="todo__title">{title}</h3>
-                            <p style={{backgroundColor: completed ? "#4b993c" : "#ad4834"}} className="todo__completed">{`${completed ? "completed" : "not completed"}`}</p>
+                        <div className="todoPage__task">
+                            <h3 className="todoPage__title">{title}</h3>
+                            <p style={{backgroundColor: completed ? "#4b993c" : "#ad4834"}} className="todoPage__completed">{`${completed ? "completed" : "not completed"}`}</p>
                         </div> 
                     ) : <p>loading...</p>} 
             </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import MyTodo from './MyTodo';
 
-const TodoList = ({todos, setTodos, filteredTodos}) => {
+function TodoList({todos, setTodos, filteredTodos}){
     return(
             <ul className="todo__list">
                 {filteredTodos.map(todo => (

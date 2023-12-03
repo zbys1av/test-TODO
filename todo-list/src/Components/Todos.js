@@ -15,11 +15,6 @@ function Todos(){
     let randomLength = todos ? Math.floor(Math.random() * todos.length) : "loading";
     // let randomLength = 230;
 
-
-    function test(e){
-        const task = e.target.elements.task.value;
-    }
-
     function handleSubmit(e){
         e.preventDefault();
         const task = e.target.elements.task.value;

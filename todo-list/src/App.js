@@ -1,25 +1,14 @@
 //Importing components
 import React, {useState, useEffect} from 'react';
-
 import Header from './Components/Header';
 import Form from './Components/Form';
-
 import Todos from './Components/Todos';
 import Todo from './Components/Todo';
-import Crud from './Components/Crud';
-
-// import Form1 from "./Components/Form1"
 import TodoList from "./Components/TodoList"
 
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-// import Switch from "react-switch";
 
-//All components that should to be rendered in our APP
 function App() {
-
-
-
-
   const [inputText, setInputText] = useState('');
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState('all');
@@ -61,13 +50,11 @@ function App() {
     }
   };
 
-
   return (
-
-
     <div className="body">
       <div className="container">
         <Header/>
+        {/* CUSTOM SECTION */}
         <Form 
           inputText={inputText} 
           todos={todos} 
@@ -80,35 +67,21 @@ function App() {
           setTodos={setTodos} 
           todos={todos}
         />
+        {/* API SECTION */}
         <Router>
           <Routes>
             {/* HOME PAGE */}
             <Route path='/' element={<Todos/>}/>    
-            {/* LETTING PROGRAM TO KNOW WHAT WE WANT TO ACCESS */}
+            {/* LETTING PROGRAM TO KNOW WHAT PAGE WE WANT TO ACCESS */}
             <Route path='/todo/:id' element={<Todo/>}/>
           </Routes>
         </Router>
+        <footer className="footer">
+          <p className="footer__text">made by <a className='footer__link' target="_blank" href="https://github.com/zbys1av">zbs1v</a></p>
+          <p className="footer__year">dec 2023</p>
+        </footer>
       </div>
     </div>
-
-
-
-    // <div className='body'>
-    //   <div className="container">
-    //     <Header/>
-    //     {/* <Crud/> */}
-    //     <Form/>
-    //     <Router>
-    //       <Routes>
-    //         {/* HOME PAGE */}
-    //         <Route path='/' element={<Todos/>}/>    
-    //         {/* LETTING PROGRAM TO KNOW WHAT WE WANT TO ACCESS */}
-    //         <Route path='/todo/:id' element={<Todo/>}/>
-    //       </Routes>
-    //     </Router>
-    //   </div>
-    // </div>
-    
   );
 }
 
