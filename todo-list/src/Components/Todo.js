@@ -4,8 +4,8 @@ import { useParams, useNavigate } from "react-router-dom";
 function Todo(props){
 
     const {id} = useParams();   // to get value from .../todo/ID 
-    let navigate  = useNavigate();
-    const [details, setDetails] = useState();
+    let navigate  = useNavigate();  //used to "navigate" between our main page and task page
+    const [details, setDetails] = useState();   //out info such as "id, title, status..."
 
     useEffect(function(){
         fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)

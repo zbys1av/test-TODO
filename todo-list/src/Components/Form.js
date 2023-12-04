@@ -2,20 +2,23 @@ import React from 'react';
 
 function Form ({setInputText, todos, setTodos, inputText , setStatus}){
 
-    const inputTextHandler = (e) => {
-        setInputText(e.target.value);
+    //get value from input
+    const inputTextHandler = (event) => {
+        setInputText(event.target.value);
     };
 
-    const submitTodoHandler = (e) => {
-        e.preventDefault();
+    //submit data from input
+    const submitTodoHandler = (event) => {
+        event.preventDefault();
         setTodos([
             ...todos, {text: inputText, completed: false, id: Math.random() * 1000}
         ])
         setInputText('');
     };
 
-    const statusHandler = (e) => {
-        setStatus(e.target.value);
+    //get status of our "task"
+    const statusHandler = (event) => {
+        setStatus(event.target.value);
     }
 
     return(

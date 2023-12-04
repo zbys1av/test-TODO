@@ -1,18 +1,16 @@
-//Importing components
 import React, {useState, useEffect} from 'react';
 import Header from './Components/Header';
 import Form from './Components/Form';
 import Todos from './Components/Todos';
 import Todo from './Components/Todo';
 import TodoList from "./Components/TodoList"
-
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 function App() {
-  const [inputText, setInputText] = useState('');
-  const [todos, setTodos] = useState([]);
-  const [status, setStatus] = useState('all');
-  const [filteredTodos, setFilteredTodos] = useState([]);
+  const [inputText, setInputText] = useState('');             // data from input
+  const [todos, setTodos] = useState([]);                     // tasks
+  const [status, setStatus] = useState('all');                //task status
+  const [filteredTodos, setFilteredTodos] = useState([]);     //our filter
 
   useEffect(() => {
     getLocalTodos();
@@ -23,6 +21,7 @@ function App() {
     saveLocalTodos();
   }, [todos, status]);
 
+  //filter our tasks to "All, completed or uncompleted"
   const filterHandler = () => {
     switch(status){
       case 'completed':

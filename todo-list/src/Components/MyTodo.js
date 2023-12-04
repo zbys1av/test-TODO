@@ -1,10 +1,13 @@
 import React from 'react';
 
 function Todo ({text, todos, setTodos, todo}){
+
+    //detele "task"
     const deleteHandler = () => {
         setTodos(todos.filter(el => el.id !== todo.id))
     };
 
+    //change status of "task" to "completed"
     const completeHandler = () => {
         setTodos(todos.map(item => {
             if(item.id === todo.id){
